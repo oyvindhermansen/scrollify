@@ -6,8 +6,12 @@ export default function scrollify(opts) {
   opts = ({
     selector: null,
     scrollTo: null,
-    speed: 1000,
+    speed: null,
   }, opts)
+
+  if (!opts.speed) {
+    opts.speed = 1000
+  }
 
   const $body = $('html, body')
   $body.on('click', opts.selector, () => {

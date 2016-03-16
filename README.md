@@ -15,6 +15,6 @@ import scrollify from 'scrollify'
 scrollify({
   selector: $('#yourButton'),
   scrollTo: $('#scrollHere'),
-  speed: 1000
+  speed: 1000 // default
 })
 ```
