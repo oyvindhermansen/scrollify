@@ -4,8 +4,7 @@
   "description": "Event scrolling made easy",
   "main": "lib/scrollzy.build.js",
   "scripts": {
-    "prebuild": "rm -rf lib && mkdir lib",
-    "build": "babel src/scrollzy.js -o lib/index.build.js",
+    "build": "babel src/scrollzy.js -o lib/scrollzy.build.js",
     "test": "mocha tests/scrollzy.test.js --compilers js:babel-core/register"
   },
   "repository": {
