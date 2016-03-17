@@ -1,7 +1,7 @@
 {
-  "name": "npm-module-boilerplate",
+  "name": "scrollify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Event scrolling made easy",
   "main": "lib/index.build.js",
   "scripts": {
     "prebuild": "rm -rf lib && mkdir lib",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oyvindhermansen/npm-module-boilerplate.git"
+    "url": "git+https://github.com/oyvindhermansen/scrollify.git"
   },
-  "author": "Øyvind Hermansen <oyvind@ludensreklame.no>",
+  "author": "Øyvind Hermansen <oyvind@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oyvindhermansen/npm-module-boilerplate/issues"
+    "url": "https://github.com/oyvindhermansen/scrollify/issues"
   },
-  "homepage": "https://github.com/oyvindhermansen/npm-module-boilerplate#readme",
+  "homepage": "https://github.com/oyvindhermansen/scrollify#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.4",
