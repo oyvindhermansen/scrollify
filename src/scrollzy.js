@@ -2,7 +2,7 @@
 
 import $ from 'jquery'
 
-export default function scrollify(opts) {
+export default function scrollzy(opts) {
   opts = ({
     selector: null,
     scrollTo: null,

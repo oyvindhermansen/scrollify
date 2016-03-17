@@ -1,23 +1,23 @@
 {
-  "name": "scrollify",
+  "name": "scrollzy",
   "version": "1.0.0",
   "description": "Event scrolling made easy",
-  "main": "lib/index.build.js",
+  "main": "lib/scrollzy.build.js",
   "scripts": {
     "prebuild": "rm -rf lib && mkdir lib",
-    "build": "babel src/index.js -o lib/index.build.js",
-    "test": "mocha tests/index.test.js --compilers js:babel-core/register"
+    "build": "babel src/scrollzy.js -o lib/index.build.js",
+    "test": "mocha tests/scrollzy.test.js --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oyvindhermansen/scrollify.git"
+    "url": "git+https://github.com/oyvindhermansen/scrollzy.git"
   },
   "author": "Øyvind Hermansen <oyvind@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oyvindhermansen/scrollify/issues"
+    "url": "https://github.com/oyvindhermansen/scrollzy/issues"
   },
-  "homepage": "https://github.com/oyvindhermansen/scrollify#readme",
+  "homepage": "https://github.com/oyvindhermansen/scrollzy#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.4",

@@ -1,18 +1,18 @@
-# scrollify
+# scrollzy
 
 ## Install
 
 ```
-$ git clone https://github.com/oyvindhermansen/scrollify.git && cd scrollify
+$ git clone https://github.com/oyvindhermansen/scrollify.git && cd scrollzy
 $ npm install
 ```
 
 ## Usage
 
 ```javascript
-import scrollify from 'scrollify'
+import scrollzy from 'scrollzy'
 
-scrollify({
+scrollzy({
   selector: $('#yourButton'),
   scrollTo: $('#scrollHere'),
   speed: 1000 // default
