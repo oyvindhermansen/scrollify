@@ -3,8 +3,7 @@
 ## Install
 
 ```
-$ git clone https://github.com/oyvindhermansen/scrollify.git && cd scrollzy
-$ npm install
+$ npm install scrollzy
 ```
 
 ## Usage
