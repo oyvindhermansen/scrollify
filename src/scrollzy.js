@@ -13,8 +13,8 @@ export default function scrollzy(opts) {
     opts.speed = 1000
   }
 
-  const $body = $('html, body')
-  $body.on('click', opts.selector, () => {
+  opts.selector.on('click', () => {
+    const $body = $('html, body')
     $body.animate({
       scrollTop: opts.scrollTo.offset().top
     }, parseInt(opts.speed))
