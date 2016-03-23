@@ -4,8 +4,8 @@ import $ from 'jquery'
 
 export default function scrollzy(opts) {
   opts = ({
-    event: null,
-    selector: null,
+    eventType: null,
+    trigger: null,
     scrollTo: null,
     speed: null,
   }, opts)
@@ -18,7 +18,7 @@ export default function scrollzy(opts) {
     opts.event = 'click'
   }
 
-  opts.selector.on(opts.event, () => {
+  opts.trigger.on(opts.eventType, () => {
     const $body = $('html, body')
     $body.animate({
       scrollTop: opts.scrollTo.offset().top

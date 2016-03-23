@@ -12,7 +12,7 @@ $ npm install scrollzy
 import scrollzy from 'scrollzy'
 
 scrollzy({
-  selector: $('#yourButton'),
+  trigger: $('#yourButton'),
   scrollTo: $('#scrollHere'),
   speed: 1000 // default
 })
@@ -24,9 +24,8 @@ Default value of event is currently 'click'
 ```javascript
 // Example
 scrollzy({
-  event: 'mouseover', // or whatever you like
-  selector: $('#yourButton'),
+  eventType: 'mouseover', // or whatever you like
+  trigger: $('#yourButton'),
   scrollTo: $('#scrollHere'),
-  speed: 1000 // default
 })
 ```
