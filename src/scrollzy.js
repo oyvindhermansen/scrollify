@@ -14,8 +14,8 @@ export default function scrollzy(opts) {
     opts.speed = 1000
   }
 
-  if (!opts.event) {
-    opts.event = 'click'
+  if (!opts.eventType) {
+    opts.eventType = 'click'
   }
 
   opts.trigger.on(opts.eventType, () => {

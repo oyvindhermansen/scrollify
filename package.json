@@ -1,6 +1,6 @@
 {
   "name": "scrollzy",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Event scrolling made easy",
   "main": "lib/scrollzy.build.js",
   "scripts": {
