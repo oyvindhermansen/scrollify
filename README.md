@@ -18,7 +18,7 @@ scrollzy({
 })
 ```
 ### Options
-You can add 'event' as a key.
+You can add 'eventType' as a key.
 Default value of event is currently 'click'
 
 ```javascript
