@@ -9,7 +9,7 @@ $ npm install scrollzy
 ## Usage
 
 ```javascript
-import scrollzy from 'scrollzy'
+import { scrollzy } from 'scrollzy'
 
 scrollzy({
   trigger: $('#yourButton'),
