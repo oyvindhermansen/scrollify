@@ -12,8 +12,8 @@ $ npm install scrollzy
 import { scrollzy } from 'scrollzy'
 
 scrollzy({
-  trigger: $('#yourButton'),
-  scrollTo: $('#scrollHere'),
+  trigger: '#yourButton',
+  scrollTo: '#scrollHere',
 })
 ```
 ### Options
