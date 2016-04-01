@@ -8,6 +8,7 @@ class Scrollzy {
       scrollTo: null,
       eventType: null,
       speed: null,
+      easing: null,
     }, opts)
 
     this.init()
@@ -18,21 +19,23 @@ class Scrollzy {
     this.checkScrollTo(this.opts.scrollTo)
     this.checkSpeed(this.opts.speed)
     this.checkEventType(this.opts.eventType)
+    this.checkEasing(this.opts.easing)
 
     this.setEventListener(
       this.opts.trigger,
       this.opts.scrollTo,
       this.opts.speed,
-      this.opts.eventType
+      this.opts.eventType,
+      this.opts.easing
     )
   }
 
-  setEventListener(trigger, scrollToElement, speed, eventType) {
+  setEventListener(trigger, scrollToElement, speed, eventType, easing) {
     this.checkTrigger(trigger).on(this.checkEventType(eventType), () => {
       const $body = $('body, html')
       $body.animate({
         scrollTop: this.checkScrollTo(scrollToElement).offset().top
-      }, parseInt(this.checkSpeed(speed)))
+      }, parseInt(this.checkSpeed(speed), this.checkEasing(easing)))
     })
   }
 
@@ -70,6 +73,15 @@ class Scrollzy {
       throw new Error(`Speed should be a number, not a ${typeof speed}.`)
     }
     return speed
+  }
+
+  checkEasing(easing) {
+    if (!easing) {
+      this.opts.easing = 'linear'
+    } else if (typeof easing !== 'string') {
+      throw new Error(`Easing should be a string, not a ${typeof easing}.`)
+    }
+    return easing
   }
 }
 

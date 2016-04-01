@@ -21,4 +21,5 @@ Currently only two options:
 ```
 eventType // default: click
 speed // default: 1000ms
+easing // default: linear
 ```
