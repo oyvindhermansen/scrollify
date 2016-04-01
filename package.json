@@ -1,6 +1,6 @@
 {
   "name": "scrollzy",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Event scrolling made easy",
   "main": "lib/scrollzy.build.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/oyvindhermansen/scrollzy.git"
   },
   "author": "Øyvind Hermansen <oyvind@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/oyvindhermansen/scrollzy/issues"
   },

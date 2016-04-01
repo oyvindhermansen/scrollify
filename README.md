@@ -23,3 +23,5 @@ eventType // default: click
 speed // default: 1000ms
 easing // default: linear
 ```
+### License
+[MIT](LICENSE)
