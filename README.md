@@ -17,7 +17,6 @@ scrollzy({
 })
 ```
 ### Options
-Currently only two options:
 ```
 eventType // default: click
 speed // default: 1000ms
