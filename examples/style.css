@@ -1,0 +1,15 @@
+.top {
+  height: 100vh;
+  width: 100%;
+  background: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bottom {
+  height: 100vh;
+  width: 100%;
+  background: lightblue;
+}
