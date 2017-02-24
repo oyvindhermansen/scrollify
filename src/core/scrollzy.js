@@ -1,22 +1,15 @@
 import $ from 'jquery';
-import { isPlainObject, typeCheck } from './utils/utils';
+import { isPlainObject, typeCheck } from '../utils/utils';
 
 const handleScrollzyEvent = (event, scrollTo, speed) => {
   const $body = $('body, html');
 
   $body.animate({
-    scrollTop: scrollTo.offset().top
+    scrollTop: scrollTo.offset().top,
   }, speed);
-
-  console.log({
-    event,
-    scrollTo,
-    speed,
-  })
 };
 
-const scrollzy = (options) => {
-
+const scrollzy = (options = {}) => {
   const {
     trigger,
     scrollTo,
@@ -26,8 +19,8 @@ const scrollzy = (options) => {
 
   if (!isPlainObject(options)) {
     throw new Error(
-      `scrollzy only accepts a plain object
-      as argument.`
+      'scrollzy only accepts a plain object' +
+      'as argument.'
     );
   }
 
@@ -37,9 +30,9 @@ const scrollzy = (options) => {
 
   /* add error handling for certain options */
   if (!typeCheck(initSpeed, 'number')) {
-    throw new Error(`Expected speed to be a typeof number.`);
+    throw new Error('Expected speed to be a typeof number.');
   } else if (!typeCheck(initEventType, 'string')) {
-    throw new Error(`Expected event method to be a typeof string.`);
+    throw new Error('Expected event method to be a typeof string.');
   }
 
   trigger.on(initEventType, (event) => {
@@ -47,7 +40,7 @@ const scrollzy = (options) => {
       event,
       scrollTo,
       initSpeed
-    )
+    );
   });
 };
 
