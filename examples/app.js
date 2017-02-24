@@ -1,8 +1,8 @@
 var $ = require('jquery');
-var scrollzy = require('../lib/scrollzy.js').default;
+var scrollzy = require('../lib/index.js').default;
 
 scrollzy({
   trigger: $('#trigger'),
-  speed: 1000,
+  speed: 2000,
   scrollTo: $('#bottom'),
 });

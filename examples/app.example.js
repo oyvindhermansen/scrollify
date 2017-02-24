@@ -1,14 +1,14 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var $ = require('jquery');
-var scrollzy = require('../lib/scrollzy.js').default;
+var scrollzy = require('../lib/index.js').default;
 
 scrollzy({
   trigger: $('#trigger'),
-  speed: 1000,
+  speed: 2000,
   scrollTo: $('#bottom'),
 });
 
-},{"../lib/scrollzy.js":2,"jquery":4}],2:[function(require,module,exports){
+},{"../lib/index.js":3,"jquery":5}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19,7 +19,7 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _utils = require('./utils/utils');
+var _utils = require('../utils/utils');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29,15 +29,10 @@ var handleScrollzyEvent = function handleScrollzyEvent(event, scrollTo, speed) {
   $body.animate({
     scrollTop: scrollTo.offset().top
   }, speed);
-
-  console.log({
-    event: event,
-    scrollTo: scrollTo,
-    speed: speed
-  });
 };
 
-var scrollzy = function scrollzy(options) {
+var scrollzy = function scrollzy() {
+  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
   var trigger = options.trigger;
   var scrollTo = options.scrollTo;
   var eventType = options.eventType;
@@ -45,7 +40,7 @@ var scrollzy = function scrollzy(options) {
 
 
   if (!(0, _utils.isPlainObject)(options)) {
-    throw new Error('scrollzy only accepts a plain object\n      as argument.');
+    throw new Error('scrollzy only accepts a plain object' + 'as argument.');
   }
 
   /* set default values out of the options that need it.*/
@@ -65,7 +60,26 @@ var scrollzy = function scrollzy(options) {
 };
 
 exports.default = scrollzy;
-},{"./utils/utils":3,"jquery":4}],3:[function(require,module,exports){
+},{"../utils/utils":4,"jquery":5}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _scrollzy = require('./core/scrollzy');
+
+var _scrollzy2 = _interopRequireDefault(_scrollzy);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Make it available in window */
+if (typeof window !== 'undefined') {
+  window.scrollzy = _scrollzy2.default;
+}
+
+exports.default = _scrollzy2.default;
+},{"./core/scrollzy":2}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -81,7 +95,7 @@ var isPlainObject = exports.isPlainObject = function isPlainObject(obj) {
 var typeCheck = exports.typeCheck = function typeCheck(input, type) {
   return (typeof input === 'undefined' ? 'undefined' : _typeof(input)) === type;
 };
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.2.1
  * http://jquery.com/
