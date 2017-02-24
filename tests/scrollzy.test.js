@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import $ from 'jquery';
 import scrollzy from '../src/scrollzy';
+import { isPlainObject, typeCheck } from '../src/utils/utils';
 
 describe('Scrollzy', () => {
   it('should throw error when not passing a plain object as argument', () => {
@@ -16,16 +17,38 @@ describe('Scrollzy', () => {
       })
     }).to.throw(Error)
   });
+
+  it('should throw if eventType is not a string', () => {
+    expect(() => {
+      scrollzy({
+        eventType: {something: 'lol'}
+      })
+    }).to.throw(Error)
+  })
 });
 
 describe('Helpers', () => {
+  describe('isPlainObject', () => {
+    it('should return false if given something other than an object', () => {
+      expect(isPlainObject([
+        "something"
+      ])).to.equal(false)
+    })
+
+    it('should return true if given a plain object as arg', () => {
+      expect(isPlainObject({
+        isObject: true
+      })).to.equal(true)
+    })
+  })
+
   describe('typeCheck', () => {
     it('should return false if not matching typeof first param with given type', () => {
-      // this will check the helper
+      expect(typeCheck('some kind of string', 'number')).to.equal(false)
     })
 
     it('should return true if matching typeof first param with given type', () => {
-      // this will check the helper
+      expect(typeCheck('some kind of string', 'string')).to.equal(true)
     })
   })
 })
