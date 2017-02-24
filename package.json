@@ -2,13 +2,13 @@
   "name": "scrollzy",
   "version": "1.2.4",
   "description": "Event scrolling made easy",
-  "main": "lib/scrollzy.build.js",
+  "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
     "examples": "yarn run build && browserify examples/app.js -o examples/app.example.js",
     "test": "mocha tests/scrollzy.test.js --compilers js:babel-core/register",
     "test:watch": "mocha tests/scrollzy.test.js --compilers js:babel-core/register --watch",
-    "lint": "./node_modules/.bin/eslint src/scrollzy.js",
+    "lint": "./node_modules/.bin/eslint src/core/scrollzy.js",
     "lint:watch": "esw -w --color src/",
     "build": "NODE_ENV=production cross-env BABEL_ENV=commonjs babel src --out-dir lib",
     "prepublish": "npm run clean && npm run lint && npm run build"
