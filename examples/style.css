@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  height: 100vh;
+  width: 100%;
+  background: rgb(237, 237, 237);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#trigger {
+  padding: 20px 50px;
+  border: 0;
+  font-size: 1rem;
+  background: orange;
+  cursor: pointer;
+}
+
+#trigger:hover {
+  background: black;
+  color: orange;
+}
+
+.bottom {
+  height: 100vh;
+  width: 100%;
+  background: orange;
+}
