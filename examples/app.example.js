@@ -40,7 +40,7 @@ var scrollzy = function scrollzy() {
 
 
   if (!(0, _utils.isPlainObject)(options)) {
-    throw new Error('scrollzy only accepts a plain object' + 'as argument.');
+    throw new Error('scrollzy only accepts a plain object as argument.');
   }
 
   /* set default values out of the options that need it.*/
